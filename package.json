@@ -1,0 +1,15 @@
+{
+  "name": "Симулятор студента",
+  "description": "Симулятор студента",
+  "version": "0.1",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+	"icon": "icon.png",
+    "width": 1400,
+    "height": 700,
+	"min_width": 1400
+  }
+}
+
+

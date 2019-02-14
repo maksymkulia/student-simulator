@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>Student Simulator</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<script language="javascript" src="js/jq.js"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+	<!--Top part of Site-->
+	<header>
+	</header>
+	<!--Game Block-->
+	<div align="center">
+		<div align="left"; id="Game">
+			<!--Status Menu-->
+			<ul id="StatusMenu">
+				<li><span style="color:#3895d4;">MONEY:</span> <span id="ValMoney"></span> UAH</li>
+				<li><span style="color:#3895d4;">RESPECT:</span> <span id="ValRespect"></span></li>
+				<li><span style="color:#3895d4;">HOMEWORK:</span> <span id="ValHW"></span></li>
+				<li><span style="color:#3895d4;">FIENDS:</span> <span id="ValFriends">7</span></li>
+				<li><span style="color:#3895d4;">GIRLFRIEND:</span> <span id="ValGirlfriend">SUPER!</span></li>
+				<li><span style="color:#3895d4;">SCHOLARSHIP:</span> <span id="ValScholarship">YES</span></li>
+				<li><span style="color:#3895d4;">WORK:</span> <span id="ValWork">NO</span></li>
+			</ul>
+			<!--Action Menu-->
+			<ul id="ActionMenu">
+				<li id="TabFo" onclick="ChangeTab('Fo');">FOOD</li>
+				<li id="TabH" onclick="ChangeTab('H');">HEALTH</li>
+				<li id="TabM" onclick="ChangeTab('M');">MOOD</li>
+				<li id="TabW" onclick="ChangeTab('W');">WORK</li>
+				<li id="TabS" onclick="ChangeTab('S');">STUDY</li>
+				<li id="TabR" onclick="ChangeTab('R');">RESPECT</li>
+				<li id="TabFr" onclick="ChangeTab('Fr');">FRIENDS</li>
+				<li id="TabG" onclick="ChangeTab('G');">GIRLFRIEND</li>
+				<li id="TabB" onclick="ChangeTab('B');">BUY</li>
+			</ul>
+			<hr/>
+			<!--FOOD Actions-->
+			<div id="Fo">
+				<div onclick="CountVals(rand(0,10), rand(0,5), 0, rand(0,10), rand(-5,0), 0, 0);">ASK NEIGHBOR</div>
+				<div onclick="CountVals(rand(0,20), rand(-5,5), 0, rand(-5,10), rand(-10,0), 0, 0);">ROBBER NEIGHBOR</div>
+				<div onclick="CountVals(rand(20,25), rand(-10,10), 0, rand(-5,15), 0, -50, 0);">GO TO BISTRO</div>
+				<div onclick="CountVals(rand(25,30), rand(-5,15), 0, rand(0,15), rand(5,10), -150, 0);">GO TO CAFE</div>
+				<div onclick="CountVals(rand(50,80), rand(10,15), 0, rand(15,25), rand(10,15), -400, 0);">GO TO RESTAURANT</div>
+			</div>
+			<!--HEALTH Actions-->
+			<div id="H">
+				<div onclick="CountVals(0, rand(-5,10), 0, rand(-10,0), 0, 0, 0);">SELF-TREATMENT</div>
+				<div onclick="CountVals(0, rand(10,25), 0, rand(-10,0), 0, -50, 0);">GO TO THE DOCTOR</div>
+				<div onclick="CountVals(0, rand(80,100), 0, rand(-20,0), 0, -300, 0);">TREATMENT COURSE</div>
+			</div>
+			<!--MOOD Actions-->
+			<div id="M">
+				<div onclick="CountVals(0, rand(-5,5), 0, rand(0,10), rand(-10,10), 0, 0);">OLOLOLO</div>
+				<div onclick="CountVals(rand(0,5), 0, rand(-5,0), rand(10,25), 0, -50, 0);">GO TO THE CINEMA</div>
+				<div onclick="CountVals(rand(5,10), rand(-20,0), rand(-15,-5), rand(80,100), rand(-10,10), -200, 0);">GO TO THE CLUB</div>
+			</div>
+			<!--WORK Actions-->
+			<div id="W">
+				<div onclick="CountVals(rand(-15,-5), rand(-15,0), rand(-15,-5), rand(-20,10), rand(-5,15), rand(500,50), 0);">FREELANCE</div>
+				<div onclick="CountVals(-10, rand(-10,0), rand(-15,-10), rand(-20,5), rand(0,5), 200, 0);">GO TO THE WORK</div>
+				<div onclick="CountVals(-10, rand(-20,0), rand(-20,-10), rand(-20,20), rand(-20,0), rand(50,400), 0);">ROBBER SOMEONE</div>
+			</div>
+			<!--STUDY Actions-->
+			<div id="S">
+				<div onclick="CountVals(-10, rand(-15,-10), rand(10,20), rand(-15,-10), rand(0,5), 0, rand(-3,-1));">MAKE HOMEWORK</div>
+				<div onclick="CountVals(-10, rand(-10,-5), rand(5,15), rand(-20,10), rand(0,15), rand(-10,0), rand(-2,-1));">COPY HOMEWORK</div>
+				<div onclick="CountVals(-15, rand(-15,-10), rand(40,80), rand(-20,-10), rand(10,20), rand(-550,-500), -100);">BUY ALL HOMEWORK</div>
+			</div>
+			<!--RESPECT Actions-->
+			<div id="R">
+				<div onclick="CountVals(rand(-20,-10), rand(-10,20), 0, rand(-10,10), rand(10,20), -70, 0);">GO TO GYM</div>
+				<div onclick="CountVals(rand(-25,-15), rand(-10,0), 0, rand(-20,20), rand(10,40), 0, 0);">KICK FRIEND</div>
+			</div>
+			<!--FRIENDS Actions-->
+			<div id="Fr">p</div>
+			<!--GIRLFRIEND Actions-->
+			<div id="G"></div>
+			<!--BUY Actions-->
+			<div id="B"></div>
+			
+			
+			
+			<!--Analytical part-->
+			<table border="0" id="Analytical">
+			<tr>
+				<!--Left Column-->
+				<td align="left">
+				<div>
+					<div id="Name">FOOD</div><div id="Value"><span id="VFood">100</span> %</div>
+				</div>
+				<div>
+					<div id="Name">HEALTH</div><div id="Value"><span id="VHealth">35</span> %</div>
+				</div>
+				<div>
+					<div id="Name">MOOD</div><div id="Value"><span id="VMood">50</span> %</div>
+				</div>
+				<div>
+					<div id="Name">STUDY</div><div id="Value"><span id="VStudy">10</span> %</div>
+				</div>
+				</td>
+				
+				
+				<td align="center">
+				<div id="Test">
+					<div id="TestFo"></div> <div id="TestHl"></div>
+				</div>
+				<div id="AnalyticlaRight">
+					<div id="TestMo"></div> <div id="TestSt"></div>
+				</div>
+				</td>
+				
+				
+				<!--Right Column-->
+				<td align="center">
+				<div id="AnalyticlaRight">
+					<div id="Course">COURSE: <span id="ValueCourse"></span></div> <div id="Moves">MOVES: <span id="ValueMoves"></span></div>
+				</div>
+				<div id="AnalyticlaRight">
+					<div id="Semester">SEMESTER: <span id="ValueSemester"></span></div> <div id="Days">DAYS: <span id="ValueDays"></span></div>
+				</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+	<!--Bottom part of Site-->
+	<footer>
+	</footer>
+</body>
+</html>
