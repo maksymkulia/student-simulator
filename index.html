@@ -15,13 +15,9 @@
 		<div align="left"; id="Game">
 			<!--Status Menu-->
 			<ul id="StatusMenu">
-				<li><span style="color:#3895d4;">MONEY:</span> <span id="ValMoney"></span> UAH</li>
+				<li><span style="color:#3895d4;">MONEY:</span> UAH <span id="ValMoney"></span></li>
 				<li><span style="color:#3895d4;">RESPECT:</span> <span id="ValRespect"></span></li>
 				<li><span style="color:#3895d4;">HOMEWORK:</span> <span id="ValHW"></span></li>
-				<li><span style="color:#3895d4;">FIENDS:</span> <span id="ValFriends">7</span></li>
-				<li><span style="color:#3895d4;">GIRLFRIEND:</span> <span id="ValGirlfriend">SUPER!</span></li>
-				<li><span style="color:#3895d4;">SCHOLARSHIP:</span> <span id="ValScholarship">YES</span></li>
-				<li><span style="color:#3895d4;">WORK:</span> <span id="ValWork">NO</span></li>
 			</ul>
 			<!--Action Menu-->
 			<ul id="ActionMenu">
@@ -31,9 +27,6 @@
 				<li id="TabW" onclick="ChangeTab('W');">WORK</li>
 				<li id="TabS" onclick="ChangeTab('S');">STUDY</li>
 				<li id="TabR" onclick="ChangeTab('R');">RESPECT</li>
-				<li id="TabFr" onclick="ChangeTab('Fr');">FRIENDS</li>
-				<li id="TabG" onclick="ChangeTab('G');">GIRLFRIEND</li>
-				<li id="TabB" onclick="ChangeTab('B');">BUY</li>
 			</ul>
 			<hr/>
 			<!--FOOD Actions-->
@@ -52,7 +45,7 @@
 			</div>
 			<!--MOOD Actions-->
 			<div id="M">
-				<div onclick="CountVals(0, rand(-5,5), 0, rand(0,10), rand(-10,10), 0, 0);">OLOLOLO</div>
+				<div onclick="CountVals(0, rand(-5,5), 0, rand(0,10), rand(-10,10), 0, 0);">MEDITATE</div>
 				<div onclick="CountVals(rand(0,5), 0, rand(-5,0), rand(10,25), 0, -50, 0);">GO TO THE CINEMA</div>
 				<div onclick="CountVals(rand(5,10), rand(-20,0), rand(-15,-5), rand(80,100), rand(-10,10), -200, 0);">GO TO THE CLUB</div>
 			</div>
@@ -79,9 +72,9 @@
 			<div id="G"></div>
 			<!--BUY Actions-->
 			<div id="B"></div>
-			
-			
-			
+
+
+
 			<!--Analytical part-->
 			<table border="0" id="Analytical">
 			<tr>
@@ -100,18 +93,7 @@
 					<div id="Name">STUDY</div><div id="Value"><span id="VStudy">10</span> %</div>
 				</div>
 				</td>
-				
-				
-				<td align="center">
-				<div id="Test">
-					<div id="TestFo"></div> <div id="TestHl"></div>
-				</div>
-				<div id="AnalyticlaRight">
-					<div id="TestMo"></div> <div id="TestSt"></div>
-				</div>
-				</td>
-				
-				
+
 				<!--Right Column-->
 				<td align="center">
 				<div id="AnalyticlaRight">
